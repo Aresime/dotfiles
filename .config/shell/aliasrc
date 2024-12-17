@@ -1,0 +1,13 @@
+# sudo not required for some system commands
+for command in mount umount sv pacman updatedb su shutdown poweroff reboot ; do
+	alias $command="sudo $command"
+done; unset command
+
+alias vim="nvim"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -vI"
+alias ls="ls -hN --color=auto --group-directories-first"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ip="ip -color=auto"
